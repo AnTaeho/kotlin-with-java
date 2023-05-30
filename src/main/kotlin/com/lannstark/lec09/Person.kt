@@ -31,9 +31,9 @@ class Person(
     //하지만 디폴트 파라미터를 권장
     constructor(name: String): this(name, 1)
 
-    fun isAdult(): Boolean {
-        return this.age >= 20
-    }
+//    fun isAdult(): Boolean {
+//        return this.age >= 20
+//    }
 
     val isAdult: Boolean
         get() = this.age >= 20
