@@ -1,7 +1,7 @@
 package com.lannstark.lec17
 
 fun main() {
-    var fruits = listOf(
+    val fruits = listOf(
         Fruit("사과", 1000),
         Fruit("사과", 1200),
         Fruit("사과", 1200),
@@ -23,6 +23,13 @@ fun main() {
 
     println(filterFruits(fruits, isApple))
 
+    val isAllApple = fruits.all(isApple)
+    val isNoApple = fruits.none(isApple2)
+    val isAnyApple = fruits.any { fruit -> fruit.price >= 10_000 }
+    val fruitCount = fruits.count()
+    val fruitSort = fruits.sortedBy { fruit -> fruit.price }
+    val fruitSort2 = fruits.sortedByDescending { fruit -> fruit.price }
+
 }
 
 private fun filterFruits(
@@ -35,4 +42,10 @@ private fun filterFruits(
         }
     }
     return result
+}
+
+private fun filterFruits2(
+    fruits: List<Fruit>, filter: (Fruit) -> Boolean
+): List<Fruit> {
+    return fruits.filter(filter)
 }
