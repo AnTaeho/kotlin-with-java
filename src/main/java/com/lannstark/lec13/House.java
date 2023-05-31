@@ -1,11 +1,11 @@
 package com.lannstark.lec13;
 
-public class JavaHouse {
+public class House {
 
   private String address;
   private LivingRoom livingRoom;
 
-  public JavaHouse(String address) {
+  public House(String address) {
     this.address = address;
     this.livingRoom = new LivingRoom(10);
   }
@@ -22,7 +22,7 @@ public class JavaHouse {
     }
 
     public String getAddress() {
-      return JavaHouse.this.address;
+      return House.this.address;
     }
   }
 
